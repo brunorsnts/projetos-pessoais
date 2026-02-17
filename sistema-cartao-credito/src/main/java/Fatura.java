@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Fatura {
@@ -21,6 +22,7 @@ public class Fatura {
     }
 
     public List<Compra> getCompras() {
+        compras.sort(Comparator.comparing(Compra::getValor));
         return compras;
     }
 
